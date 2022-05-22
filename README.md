@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# Nom Nom Galaxy Soup Guide
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Make more soup! Created using:
+
+```zsh
+npx create-react-app --template typescript nom-nom-soup-guide
+```
 
 ## Available Scripts
 
