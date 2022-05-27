@@ -1,0 +1,211 @@
+,Name,Value,Primary Ingredient,Secondary Ingredient
+0,Mushroom Mountain,80,Bluecap,Bluecap
+1,Meteoric Mushroom,100,Greenstalk,Bluecap
+2,Double Mush Potage,70,Greenstalk,Greenstalk
+3,Purple Haze,220,Poisonpuff,Bluecap
+4,Mushstrone,120,Poisonpuff,Greenstalk
+5,Mushroom Bomber,40,Poisonpuff,Poisonpuff
+6,Cream of Mushgrass,70,Stabgrass,Bluecap
+7,Sticky Grass Stew,90,Stabgrass,Greenstalk
+8,Murky Marsh,130,Stabgrass,Poisonpuff
+9,Monobrew,70,Stabgrass,Stabgrass
+10,Mushroom Net,110,Tsutavine,Bluecap
+11,Vineshroom,100,Tsutavine,Greenstalk
+12,Creme de Creeper,20,Tsutavine,Poisonpuff
+13,Turf Noodle,140,Tsutavine,Stabgrass
+14,Dooble Noodle Soup,90,Tsutavine,Tsutavine
+15,Seabrine Shroom,120,Brineweed,Bluecap
+16,Split Sea Soup,100,Brineweed,Greenstalk
+17,Depth Charge,260,Brineweed,Poisonpuff
+18,Herbe De La Mer,300,Brineweed,Stabgrass
+19,Wonder Wakame,130,Brineweed,Tsutavine
+20,Deep Brineweed Porridge,80,Brineweed,Brineweed
+21,Mellow Mushroom,120,Corn Shell,Bluecap
+22,Cosmo Cornfield,100,Corn Shell,Greenstalk
+23,Gloomaize,260,Corn Shell,Poisonpuff
+24,Husker Dew,300,Corn Shell,Stabgrass
+25,Nubby Noodle,140,Corn Shell,Tsutavine
+26,Salty Cob,150,Corn Shell,Brineweed
+27,Creamed Cornbug,100,Corn Shell,Corn Shell
+28,Tomushroom,130,Tomaty Steak,Bluecap
+29,Red Roast Delight,200,Tomaty Steak,Greenstalk
+30,Bursting Buzz,160,Tomaty Steak,Poisonpuff
+31,Grassy Gazpacho,90,Tomaty Steak,Stabgrass
+32,Tomaty Squeeze,140,Tomaty Steak,Tsutavine
+33,Carmine Comet,250,Tomaty Steak,Brineweed
+34,Chile Con Cornbug,160,Tomaty Steak,Corn Shell
+35,Major Tom,170,Tomaty Steak,Tomaty Steak
+36,Mineral Mash,120,Squidfly Chunk,Bluecap
+37,Slimy Shroom,30,Squidfly Chunk,Greenstalk
+38,Incredible Ink,120,Squidfly Chunk,Poisonpuff
+39,Hairy Squid,40,Squidfly Chunk,Stabgrass
+40,Turbo Tentacle,300,Squidfly Chunk,Tsutavine
+41,Sea Urchin Ceviche,240,Squidfly Chunk,Brineweed
+42,Fly Chowder,150,Squidfly Chunk,Corn Shell
+43,Flyin' Tomaty,150,Squidfly Chunk,Tomaty Steak
+44,Squid Singularity,70,Squidfly Chunk,Squidfly Chunk
+45,Blueberry Scales,130,Strawburi Filet,Bluecap
+46,Strawshroom Spectrum,120,Strawburi Filet,Greenstalk
+47,Trench Toad,160,Strawburi Filet,Poisonpuff
+48,Strawburi Field,130,Strawburi Filet,Stabgrass
+49,Tangleburi Twist,40,Strawburi Filet,Tsutavine
+50,Bitter Sweet Broth,30,Strawburi Filet,Brineweed
+51,Cornburi en Croute,160,Strawburi Filet,Corn Shell
+52,Bloodberry Chowder,50,Strawburi Filet,Tomaty Steak
+53,Red Ink Rasam,10,Strawburi Filet,Squidfly Chunk
+54,Strawburi Jam,180,Strawburi Filet,Strawburi Filet
+55,Al Fungi,160,Pinapurana Filet,Bluecap
+56,Verdant Fang,50,Pinapurana Filet,Greenstalk
+57,Pinestool,170,Pinapurana Filet,Poisonpuff
+58,Green Snapper,40,Pinapurana Filet,Stabgrass
+59,Dropfruit Soup,200,Pinapurana Filet,Tsutavine
+60,Bottom Feeder,130,Pinapurana Filet,Brineweed
+61,Golden Gullet,40,Pinapurana Filet,Corn Shell
+62,Razor Rasam,170,Pinapurana Filet,Tomaty Steak
+63,Chum Chowder,160,Pinapurana Filet,Squidfly Chunk
+64,Heavy Syrup,300,Pinapurana Filet,Strawburi Filet
+65,StarTropic,150,Pinapurana Filet,Pinapurana Filet
+66,Sloppy Shroom,40,Kabo Chunk,Bluecap
+67,Equinosh,150,Kabo Chunk,Greenstalk
+68,Purple Jack,160,Kabo Chunk,Poisonpuff
+69,TumbleTurf Soup,170,Kabo Chunk,Stabgrass
+70,Vegan Vine Vichy,220,Kabo Chunk,Tsutavine
+71,Brine Rind Boil,50,Kabo Chunk,Brineweed
+72,Harvest Brew,160,Kabo Chunk,Corn Shell
+73,Squashed Tomaty Treat,160,Kabo Chunk,Tomaty Steak
+74,Squalid Squash,40,Kabo Chunk,Squidfly Chunk
+75,Snozberry Stew,160,Kabo Chunk,Strawburi Filet
+76,Flipfang Chowder,160,Kabo Chunk,Pinapurana Filet
+77,Giga Gourd,210,Kabo Chunk,Kabo Chunk
+78,Blue Screen,40,Oxygrass,Bluecap
+79,Morning Mushroom,260,Oxygrass,Greenstalk
+80,Dynamite Trip,250,Oxygrass,Poisonpuff
+81,Antigrav Grass,300,Oxygrass,Stabgrass
+82,Ventvine Stew,200,Oxygrass,Tsutavine
+83,Bouillon du Bends,20,Oxygrass,Brineweed
+84,Popcorn Potage,190,Oxygrass,Corn Shell
+85,Brilliant Tomato,220,Oxygrass,Tomaty Steak
+86,Aerosquid Bisque,190,Oxygrass,Squidfly Chunk
+87,Strawburi-Ade,220,Oxygrass,Strawburi Filet
+88,Pulsing Pine,200,Oxygrass,Pinapurana Filet
+89,Brisk Burster,220,Oxygrass,Kabo Chunk
+90,Bling Bling Burble,220,Oxygrass,Oxygrass
+91,Wattlecap,30,Chickenberry,Bluecap
+92,Chicken of the Cave,140,Chickenberry,Greenstalk
+93,Full-Bodied Fryer,300,Chickenberry,Poisonpuff
+94,Hungry Hen,150,Chickenberry,Stabgrass
+95,Chicken Noodle Cluster,160,Chickenberry,Tsutavine
+96,Brinebird Bouillon,170,Chickenberry,Brineweed
+97,Chicken Feed,270,Chickenberry,Corn Shell
+98,Parmesan Potage,200,Chickenberry,Tomaty Steak
+99,Squid Smuggler,140,Chickenberry,Squidfly Chunk
+100,Mixed Berry Broth,320,Chickenberry,Strawburi Filet
+101,Chicken Royale,190,Chickenberry,Pinapurana Filet
+102,Pollo Peligroso,400,Chickenberry,Kabo Chunk
+103,Rooster Rocket,90,Chickenberry,Oxygrass
+104,Two Piece Twister,160,Chickenberry,Chickenberry
+105,Woodland Spike,170,Thornstalk,Bluecap
+106,Stellar Shroom,300,Thornstalk,Greenstalk
+107,Gouger Gruel,40,Thornstalk,Poisonpuff
+108,Cosmic Nettle,100,Thornstalk,Stabgrass
+109,Prickle Pickle,120,Thornstalk,Tsutavine
+110,Submarine Stinger,130,Thornstalk,Brineweed
+111,Choppy Chowder,210,Thornstalk,Corn Shell
+112,Redspine Stew,140,Thornstalk,Tomaty Steak
+113,Cosmo Kraken,220,Thornstalk,Squidfly Chunk
+114,Blowfish Bisque,120,Thornstalk,Strawburi Filet
+115,Prickly Pine,20,Thornstalk,Pinapurana Filet
+116,Snarecrow,140,Thornstalk,Kabo Chunk
+117,Puncture Punch,200,Thornstalk,Oxygrass
+118,Danger Drumstick,50,Thornstalk,Chickenberry
+119,Thick Thorn Stew,20,Thornstalk,Thornstalk
+120,Wildbloom,180,Thornbloom,Bluecap
+121,Natural Low,30,Thornbloom,Greenstalk
+122,Nutrient Nova,500,Thornbloom,Poisonpuff
+123,Ochre Orchid,180,Thornbloom,Stabgrass
+124,Pliant Petal Potage,70,Thornbloom,Tsutavine
+125,Sour Sea Slurp,80,Thornbloom,Brineweed
+126,Sweet 'N' Flower Soup,90,Thornbloom,Corn Shell
+127,Lucky Tom,210,Thornbloom,Tomaty Steak
+128,Buzzy Lotus,180,Thornbloom,Squidfly Chunk
+129,Strawburi Bloom,210,Thornbloom,Strawburi Filet
+130,Squidfly Trap,220,Thornbloom,Pinapurana Filet
+131,Duskdrop Soup,210,Thornbloom,Kabo Chunk
+132,Fizzy Lifting Drink,250,Thornbloom,Oxygrass
+133,Cosmic Stuffing,230,Thornbloom,Chickenberry
+134,Mandala Mash,350,Thornbloom,Thornstalk
+135,Twin Luna,300,Thornbloom,Thornbloom
+136,Clashroom Chowder,120,Sunblossom,Bluecap
+137,Green Sun Chowder,30,Sunblossom,Greenstalk
+138,Daylight Dynamite,150,Sunblossom,Poisonpuff
+139,Sunflower Stodge,20,Sunblossom,Stabgrass
+140,Earlybird,180,Sunblossom,Tsutavine
+141,Seaflower Stew,110,Sunblossom,Brineweed
+142,Corn Impact,90,Sunblossom,Corn Shell
+143,Sun-Dyed Tomaty,150,Sunblossom,Tomaty Steak
+144,Squidflower Six,290,Sunblossom,Squidfly Chunk
+145,Sweet Flower Porridge,250,Sunblossom,Strawburi Filet
+146,Filet of Fission,160,Sunblossom,Pinapurana Filet
+147,Orange Orbit,150,Sunblossom,Kabo Chunk
+148,Zephyr Broth,400,Sunblossom,Oxygrass
+149,Red Line Rotisserie,170,Sunblossom,Chickenberry
+150,Solar Spike Stew,130,Sunblossom,Thornstalk
+151,Flareburst,300,Sunblossom,Thornbloom
+152,Double Rainbow Dew,130,Sunblossom,Sunblossom
+153,Mushed Potato,30,Masher Yam,Bluecap
+154,Mountain Melange,170,Masher Yam,Greenstalk
+155,Dark Masher,140,Masher Yam,Poisonpuff
+156,Grass Roots,100,Masher Yam,Stabgrass
+157,Truffle Shuffle,180,Masher Yam,Tsutavine
+158,Tidal Tuber,130,Masher Yam,Brineweed
+159,Cornpost,20,Masher Yam,Corn Shell
+160,Red Root Revolution,140,Masher Yam,Tomaty Steak
+161,Masher Lasher,130,Masher Yam,Squidfly Chunk
+162,Solar Spudding,140,Masher Yam,Strawburi Filet
+163,Codswallow,150,Masher Yam,Pinapurana Filet
+164,Harvest Moon,140,Masher Yam,Kabo Chunk
+165,Porous Potato,200,Masher Yam,Oxygrass
+166,Gaseous Gumbo,160,Masher Yam,Chickenberry
+167,Sauerkraut Circus,120,Masher Yam,Thornstalk
+168,Sopa Blanca,190,Masher Yam,Thornbloom
+169,Hot Potato,350,Masher Yam,Sunblossom
+170,Potato Porridge,30,Masher Yam,Masher Yam
+171,Blue Bison,190,Bisausage,Bluecap
+172,Green Grinder,200,Bisausage,Greenstalk
+173,Pungent Porridge,220,Bisausage,Poisonpuff
+174,Haymaker,190,Bisausage,Stabgrass
+175,Wild Link Stew,190,Bisausage,Tsutavine
+176,Water Bison,210,Bisausage,Brineweed
+177,Pozole Planet,320,Bisausage,Corn Shell
+178,Meaty 'Maty,220,Bisausage,Tomaty Steak
+179,Black Hole Bison,210,Bisausage,Squidfly Chunk
+180,Sweetmeat Soup,220,Bisausage,Strawburi Filet
+181,Light Year Luau,280,Bisausage,Pinapurana Filet
+182,Gutted Gourd,40,Bisausage,Kabo Chunk
+183,Psycho Bison,100,Bisausage,Oxygrass
+184,Nitrate Nebula,90,Bisausage,Chickenberry
+185,Spiny Sausage,180,Bisausage,Thornstalk
+186,Petal Pounder Potage,270,Bisausage,Thornbloom
+187,Chorizo Chowder,210,Bisausage,Sunblossom
+188,Big Bangers 'N' Mash,150,Bisausage,Masher Yam
+189,Sausage Party,300,Bisausage,Bisausage
+190,Mushroom Monarchy,450,Mammoth Meat,Bluecap
+191,Primal Potage,260,Mammoth Meat,Greenstalk
+192,Dizzy Mammoth,100,Mammoth Meat,Poisonpuff
+193,Woolly Back Beef,270,Mammoth Meat,Stabgrass
+194,Raw Hide Ramen,120,Mammoth Meat,Tsutavine
+195,Rough River,290,Mammoth Meat,Brineweed
+196,Mammoth's Eye,290,Mammoth Meat,Corn Shell
+197,Red Giant,400,Mammoth Meat,Tomaty Steak
+198,Poacher's Potion,350,Mammoth Meat,Squidfly Chunk
+199,Berry Basher,300,Mammoth Meat,Strawburi Filet
+200,Pinapurana Jerky,330,Mammoth Meat,Pinapurana Filet
+201,Kabo Consomme,270,Mammoth Meat,Kabo Chunk
+202,Stampede High,300,Mammoth Meat,Oxygrass
+203,Protein Dream,350,Mammoth Meat,Chickenberry
+204,Tender Tusk,200,Mammoth Meat,Thornstalk
+205,Handsome Beast,350,Mammoth Meat,Thornbloom
+206,Heliotripe,150,Mammoth Meat,Sunblossom
+207,Yammoth Broth,350,Mammoth Meat,Masher Yam
+208,Meatageddon,360,Mammoth Meat,Bisausage
+209,Mega Mammoth,400,Mammoth Meat,Mammoth Meat
