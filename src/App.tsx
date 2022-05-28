@@ -2,6 +2,7 @@ import "./App.css";
 import React, { useState } from "react";
 import { ingredients } from "./services/SoupService";
 import SoupList from "./components/SoupList";
+import IngredientPicker from "./components/IngredientPicker";
 
 interface AppContextInterface {
   toggledIngredients: boolean[];
@@ -15,32 +16,10 @@ function App() {
     new Array(ingredients.length).fill(false) as boolean[]
   );
 
-  const toggle = (idx: number) => {
-    const newToggledIngredients = toggledIngredients.map((b, j) => {
-      if (j === idx) {
-        return !b;
-      }
-      return b;
-    });
-
-    setToggledIngredients(() => newToggledIngredients);
-  };
-
   return (
     <AppContext.Provider value={{ toggledIngredients, setToggledIngredients }}>
       <div>
-        <div>
-          {ingredients.map((ingredient) => (
-            <button
-              key={ingredient.name}
-              onClick={() => {
-                toggle(ingredient.index);
-              }}
-            >
-              {ingredient.name}
-            </button>
-          ))}
-        </div>
+        <IngredientPicker />
         <SoupList />
       </div>
     </AppContext.Provider>
