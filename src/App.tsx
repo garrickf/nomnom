@@ -1,15 +1,21 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
 import Ingredient from "./models/Ingredient";
-import Recipe from "./models/Recipe";
-import {ingredients, getRankedRecipes} from "./services/RecipeService";
+import Soup from "./models/Soup";
+import { ingredients, getRankedSoups } from "./services/SoupService";
+
+interface AppContextInterface {
+  toggledIngredients: boolean[];
+};
+
+const AppCtx = React.createContext<AppContextInterface>({toggledIngredients: ingredients.map((i) => false)});
 
 function App() {
   const [toggledArr, setToggledArr] = useState(
     new Array(ingredients.length).fill(false) as boolean[]
   );
 
-  const [recipes, setRecipes] = useState([] as Recipe[]);
+  const [recipes, setRecipes] = useState([] as Soup[]);
 
   const toggle = (idx: number) => {
     const newToggledArr = toggledArr.map((b, j) => {
@@ -28,29 +34,31 @@ function App() {
       return agg;
     }, []);
 
-    setRecipes(() => getRankedRecipes(selected));
+    setRecipes(() => getRankedSoups(selected));
   }, [toggledArr]);
 
   return (
-    <div>
+    <AppCtx.Provider value={context}>
       <div>
-        {ingredients.map((ingredient) => (
-          <button
-            key={ingredient.name}
-            onClick={() => {
-              toggle(ingredient.index);
-            }}
-          >
-            {ingredient.name}
-          </button>
-        ))}
+        <div>
+          {ingredients.map((ingredient) => (
+            <button
+              key={ingredient.name}
+              onClick={() => {
+                toggle(ingredient.index);
+              }}
+            >
+              {ingredient.name}
+            </button>
+          ))}
+        </div>
+        <div>
+          {recipes.map((soup) => (
+            <SoupRow key={soup.name} {...soup} />
+          ))}
+        </div>
       </div>
-      <div>
-        {recipes.map((soup) => (
-          <SoupRow key={soup.name} {...soup} />
-        ))}
-      </div>
-    </div>
+    </AppCtx.Provider>
   );
 }
 

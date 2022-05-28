@@ -1,9 +1,9 @@
-import Ingredient from './Ingredient';
+import Ingredient from "./Ingredient";
 
-interface Recipe {
+interface Soup {
   name: string;
   ingredients: readonly [Ingredient, Ingredient];
   value: number;
 }
 
-export default Recipe;
+export default Soup;
