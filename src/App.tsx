@@ -1,60 +1,15 @@
 import "./App.css";
-
 import React, { useEffect, useState } from "react";
-
-import recipeMatrix from "./recipe_matrix.json";
-
-const ingredients = [
-  "Bluecap",
-  "Greenstalk",
-  "Stabgrass",
-  "Brineweed",
-  "Tsutavine",
-  "Tomaty Steak",
-  "Oxygrass",
-  "Corn Shell",
-  "Chickenberry",
-  "Bisausage",
-  "Strawburi Filet",
-  "Sunblossom",
-  "Squidfly Chunk",
-  "Pinapurana Filet",
-  "Poisonpuff",
-  "Kabo Chunk",
-  "Thornstalk",
-  "Thornbloom",
-  "Masher Yam",
-  "Mammoth Meat",
-];
-
-const getRankedRecipes = (
-  primaryIndices: Array<number>,
-  secondaryIndices: Array<number>
-) => {
-  const pairs = new Set(
-    primaryIndices
-      .map((i) =>
-        secondaryIndices.map((j) => JSON.stringify([i, j].sort().reverse()))
-      )
-      .flat()
-  );
-
-  const results = Array.from(pairs).map((s): SoupProps => {
-    const [i, j]: number[] = JSON.parse(s);
-    return {
-      ingredients: [ingredients[i], ingredients[j]],
-      ...recipeMatrix[i][j],
-    };
-  });
-
-  return results.sort((a, b) => a.value - b.value).reverse();
-};
+import Ingredient from "./models/Ingredient";
+import Recipe from "./models/Recipe";
+import {ingredients, getRankedRecipes} from "./services/RecipeService";
 
 function App() {
   const [toggledArr, setToggledArr] = useState(
-    new Array(ingredients.length).fill(false)
+    new Array(ingredients.length).fill(false) as boolean[]
   );
-  const [recipes, setRecipes] = useState(getRankedRecipes([], []));
+
+  const [recipes, setRecipes] = useState([] as Recipe[]);
 
   const toggle = (idx: number) => {
     const newToggledArr = toggledArr.map((b, j) => {
@@ -63,29 +18,30 @@ function App() {
       }
       return b;
     });
+    
     setToggledArr(() => newToggledArr);
   };
 
   useEffect(() => {
-    const indices = toggledArr.reduce((agg: Array<number>, cur, idx) => {
-      if (cur) agg.push(idx);
+    const selected = toggledArr.reduce((agg: Array<Ingredient>, cur, idx) => {
+      if (cur) agg.push(ingredients[idx]);
       return agg;
     }, []);
 
-    setRecipes(() => getRankedRecipes(indices, indices));
+    setRecipes(() => getRankedRecipes(selected));
   }, [toggledArr]);
 
   return (
     <div>
       <div>
-        {ingredients.map((ingredient, idx) => (
+        {ingredients.map((ingredient) => (
           <button
-            key={ingredient}
+            key={ingredient.name}
             onClick={() => {
-              toggle(idx);
+              toggle(ingredient.index);
             }}
           >
-            {ingredient}
+            {ingredient.name}
           </button>
         ))}
       </div>
@@ -100,14 +56,14 @@ function App() {
 
 interface SoupProps {
   name: string;
-  ingredients: readonly [string, string];
+  ingredients: readonly [Ingredient, Ingredient];
   value: number;
 }
 
 const SoupRow = (props: SoupProps) => (
   <div>
-    {props.name} {props.value} Ingredients: {props.ingredients[0]} and{" "}
-    {props.ingredients[1]}
+    {props.name} {props.value} Ingredients: {props.ingredients[0].name} and{" "}
+    {props.ingredients[1].name}
   </div>
 );
 
