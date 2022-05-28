@@ -1,22 +1,19 @@
 import "./App.css";
-import React, { useEffect, useState } from "react";
-import Ingredient from "./models/Ingredient";
-import Soup from "./models/Soup";
-import { ingredients, getRankedSoups } from "./services/SoupService";
+import React, { useState } from "react";
+import { ingredients } from "./services/SoupService";
+import SoupList from "./components/SoupList";
 
 interface AppContextInterface {
   toggledIngredients: boolean[];
-  toggle: (idx: number) => void;
-};
+  setToggledIngredients: React.Dispatch<React.SetStateAction<boolean[]>>;
+}
 
-const AppContext = React.createContext<AppContextInterface | null>(null);
+export const AppContext = React.createContext<AppContextInterface | null>(null);
 
 function App() {
   const [toggledIngredients, setToggledIngredients] = useState(
     new Array(ingredients.length).fill(false) as boolean[]
   );
-
-  const [recipes, setRecipes] = useState([] as Soup[]);
 
   const toggle = (idx: number) => {
     const newToggledIngredients = toggledIngredients.map((b, j) => {
@@ -25,21 +22,12 @@ function App() {
       }
       return b;
     });
-    
+
     setToggledIngredients(() => newToggledIngredients);
   };
 
-  useEffect(() => {
-    const selected = toggledIngredients.reduce((agg: Array<Ingredient>, cur, idx) => {
-      if (cur) agg.push(ingredients[idx]);
-      return agg;
-    }, []);
-
-    setRecipes(() => getRankedSoups(selected));
-  }, [toggledIngredients]);
-
   return (
-    <AppContext.Provider value={{toggledIngredients, toggle}}>
+    <AppContext.Provider value={{ toggledIngredients, setToggledIngredients }}>
       <div>
         <div>
           {ingredients.map((ingredient) => (
@@ -53,27 +41,10 @@ function App() {
             </button>
           ))}
         </div>
-        <div>
-          {recipes.map((soup) => (
-            <SoupRow key={soup.name} {...soup} />
-          ))}
-        </div>
+        <SoupList />
       </div>
     </AppContext.Provider>
   );
 }
-
-interface SoupProps {
-  name: string;
-  ingredients: readonly [Ingredient, Ingredient];
-  value: number;
-}
-
-const SoupRow = (props: SoupProps) => (
-  <div>
-    {props.name} {props.value} Ingredients: {props.ingredients[0].name} and{" "}
-    {props.ingredients[1].name}
-  </div>
-);
 
 export default App;
