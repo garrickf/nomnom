@@ -1,6 +1,6 @@
 interface Ingredient {
-  index: number
-  name: string
+  index: number;
+  name: string;
 }
 
 export default Ingredient;
