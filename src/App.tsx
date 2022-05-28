@@ -6,39 +6,40 @@ import { ingredients, getRankedSoups } from "./services/SoupService";
 
 interface AppContextInterface {
   toggledIngredients: boolean[];
+  toggle: (idx: number) => void;
 };
 
-const AppCtx = React.createContext<AppContextInterface>({toggledIngredients: ingredients.map((i) => false)});
+const AppContext = React.createContext<AppContextInterface | null>(null);
 
 function App() {
-  const [toggledArr, setToggledArr] = useState(
+  const [toggledIngredients, setToggledIngredients] = useState(
     new Array(ingredients.length).fill(false) as boolean[]
   );
 
   const [recipes, setRecipes] = useState([] as Soup[]);
 
   const toggle = (idx: number) => {
-    const newToggledArr = toggledArr.map((b, j) => {
+    const newToggledIngredients = toggledIngredients.map((b, j) => {
       if (j === idx) {
         return !b;
       }
       return b;
     });
     
-    setToggledArr(() => newToggledArr);
+    setToggledIngredients(() => newToggledIngredients);
   };
 
   useEffect(() => {
-    const selected = toggledArr.reduce((agg: Array<Ingredient>, cur, idx) => {
+    const selected = toggledIngredients.reduce((agg: Array<Ingredient>, cur, idx) => {
       if (cur) agg.push(ingredients[idx]);
       return agg;
     }, []);
 
     setRecipes(() => getRankedSoups(selected));
-  }, [toggledArr]);
+  }, [toggledIngredients]);
 
   return (
-    <AppCtx.Provider value={context}>
+    <AppContext.Provider value={{toggledIngredients, toggle}}>
       <div>
         <div>
           {ingredients.map((ingredient) => (
@@ -58,7 +59,7 @@ function App() {
           ))}
         </div>
       </div>
-    </AppCtx.Provider>
+    </AppContext.Provider>
   );
 }
 
