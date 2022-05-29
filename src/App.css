@@ -1,3 +1,14 @@
+:root {
+  --rarity-gray: #BEBEBE;
+  --rarity-blue: #306AFF;
+  --rarity-green: #40A511;
+  --rarity-purple: #7723FF;
+  --rarity-yellow: #FFCF23;
+
+  --weight-500-medium: 500;
+  --weight-600-semibold: 600;
+}
+
 .App {
   text-align: center;
 }
