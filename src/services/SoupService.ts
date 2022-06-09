@@ -1,10 +1,7 @@
 import Ingredient from "../models/Ingredient";
-import Soup from "../models/Soup";
 import RecipeMatrixItem from "../models/RecipeMatrixItem";
-import ingredientsJson from "../data/ingredients.json";
+import Soup from "../models/Soup";
 import recipeJson from "../data/soupMatrix.json";
-
-const ingredients: Ingredient[] = ingredientsJson;
 
 const recipeMatrix: RecipeMatrixItem[][] = recipeJson;
 
@@ -35,4 +32,4 @@ function getRankedSoups(selectedIngredients: Ingredient[]): Soup[] {
   return recipes;
 }
 
-export { ingredients, recipeMatrix, getRankedSoups };
+export { recipeMatrix, getRankedSoups };

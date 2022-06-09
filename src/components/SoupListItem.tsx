@@ -87,6 +87,13 @@ const SoupIngredients = styled.div`
   margin-top: 0.3em;
   grid-column-start: 2;
   grid-row-start: 2;
+  display: flex;
+  align-items: center;
+`;
+
+const Ing = styled.img`
+  height: 1.1em;
+  padding: 0 0.3em 0 0.2em;
 `;
 
 const SoupListItem = (props: Soup) => {
@@ -97,7 +104,8 @@ const SoupListItem = (props: Soup) => {
       <SoupValue rarity={rarity}>{props.value}</SoupValue>{" "}
       <SoupTitle>{props.name}</SoupTitle>
       <SoupIngredients>
-        {props.ingredients[0].name} + {props.ingredients[1].name}
+        {props.ingredients[0].name} <Ing src={props.ingredients[0].svg} />+{" "}
+        {props.ingredients[1].name} <Ing src={props.ingredients[1].svg} />
       </SoupIngredients>
     </SoupListItemContainer>
   );

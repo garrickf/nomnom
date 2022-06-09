@@ -1,8 +1,10 @@
 import "./App.css";
+
 import React, { useState } from "react";
-import { ingredients } from "./services/SoupService";
-import SoupList from "./components/SoupList";
+
+import { INGREDIENTS } from "./services/IngredientService";
 import IngredientPicker from "./components/IngredientPicker";
+import SoupList from "./components/SoupList";
 
 interface AppContextInterface {
   toggledIngredients: boolean[];
@@ -13,7 +15,7 @@ export const AppContext = React.createContext<AppContextInterface | null>(null);
 
 function App() {
   const [toggledIngredients, setToggledIngredients] = useState(
-    new Array(ingredients.length).fill(false) as boolean[]
+    new Array(INGREDIENTS.length).fill(false) as boolean[]
   );
 
   return (
