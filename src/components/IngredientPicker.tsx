@@ -1,6 +1,6 @@
-import { useContext } from "react";
 import { AppContext } from "../App";
-import { ingredients } from "../services/SoupService";
+import { INGREDIENTS } from "../services/IngredientService";
+import { useContext } from "react";
 
 const IngredientPicker = () => {
   const appContext = useContext(AppContext);
@@ -22,7 +22,7 @@ const IngredientPicker = () => {
 
   return (
     <div>
-      {ingredients.map((ingredient) => (
+      {INGREDIENTS.map((ingredient) => (
         <button
           key={ingredient.name}
           onClick={() => {

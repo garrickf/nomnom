@@ -1,10 +1,11 @@
-import { getRankedSoups, ingredients } from "../services/SoupService";
 import { useContext, useEffect, useState } from "react";
 
 import { AppContext } from "../App";
+import { INGREDIENTS } from "../services/IngredientService";
 import Ingredient from "../models/Ingredient";
 import Soup from "../models/Soup";
 import SoupListItem from "./SoupListItem";
+import { getRankedSoups } from "../services/SoupService";
 
 const SoupList = () => {
   const appContext = useContext(AppContext);
@@ -13,8 +14,8 @@ const SoupList = () => {
   useEffect(() => {
     const selected =
       appContext?.toggledIngredients.reduce(
-        (agg: Array<Ingredient>, cur, idx) => {
-          if (cur) agg.push(ingredients[idx]);
+        (agg: Array<Ingredient>, toggled, idx) => {
+          if (toggled) agg.push(INGREDIENTS[idx]);
           return agg;
         },
         []
