@@ -21,6 +21,8 @@ const IngredientPicker = () => {
     appContext.setToggledIngredients(() => newToggledIngredients);
   };
 
+  const toggledIngredients = useContext(AppContext)?.toggledIngredients;
+
   const clear = () => {
     if (appContext === null) {
       return;
@@ -60,6 +62,30 @@ const IngredientPicker = () => {
     margin-top: 0;
   `;
 
+  const IngredientsContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+
+    & .inactive {
+      filter: grayscale(100%);
+    }
+  `;
+
+  const IngredientImgContainer = styled.span`
+    display: inline-flex;
+
+    :hover {
+      background-color: #d9d9d9;
+      border-radius: 50%;
+    }
+  `;
+
+  const IngredientImg = styled.img`
+    height: 2em;
+    width: 2em;
+  `;
+
   return (
     <div>
       <Header>
@@ -67,16 +93,26 @@ const IngredientPicker = () => {
         <ClearButton onClick={() => clear()}>Clear</ClearButton>
       </Header>
       <HeaderLine />
-      {INGREDIENTS.map((ingredient) => (
-        <button
-          key={ingredient.name}
-          onClick={() => {
-            toggle(ingredient.index);
-          }}
-        >
-          {ingredient.name}
-        </button>
-      ))}
+      <IngredientsContainer>
+        {INGREDIENTS.map((ingredient) => (
+          <IngredientImgContainer>
+            <IngredientImg
+              key={ingredient.name}
+              src={ingredient.svg}
+              onClick={() => {
+                toggle(ingredient.index);
+              }}
+              className={
+                toggledIngredients !== undefined &&
+                toggledIngredients[ingredient.index]
+                  ? "active"
+                  : "inactive"
+              }
+              title={ingredient.name}
+            />
+          </IngredientImgContainer>
+        ))}
+      </IngredientsContainer>
     </div>
   );
 };
