@@ -25,7 +25,7 @@ const SoupList = () => {
   }, [appContext]);
 
   return (
-    <div>
+    <div className="col-soups">
       {recipes.map((soup) => (
         <SoupListItem key={soup.name} {...soup} />
       ))}

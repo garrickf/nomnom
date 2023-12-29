@@ -21,7 +21,7 @@ const IngredientPicker = () => {
   };
 
   return (
-    <div>
+    <div className="col-ingredients">
       {INGREDIENTS.map((ingredient) => (
         <button
           key={ingredient.name}
