@@ -60,7 +60,6 @@ const SoupListItemContainer = styled.div`
 `;
 
 const SoupValue = styled.div<{ rarity: Rarity }>`
-  width: 2em;
   background-color: var(${(props) => rarityToBGColor(props.rarity)});
   padding: 4px;
   margin-right: 0.5em;
@@ -88,12 +87,25 @@ const SoupIngredients = styled.div`
   grid-column-start: 2;
   grid-row-start: 2;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
 `;
 
-const Ing = styled.img`
+const Ingredient = styled.div`
+  white-space: nowrap;
+`;
+
+const Plus = styled.div`
+  margin-right: 0.3em;
+
+  ::before {
+    content: "+";
+  }
+`;
+
+const IngredientImg = styled.img`
   height: 1.1em;
   padding: 0 0.3em 0 0.2em;
+  margin-left: 0.2em;
 `;
 
 const SoupListItem = (props: Soup) => {
@@ -101,11 +113,18 @@ const SoupListItem = (props: Soup) => {
 
   return (
     <SoupListItemContainer>
-      <SoupValue rarity={rarity}>{props.value}</SoupValue>{" "}
+      <SoupValue rarity={rarity}>{props.value}</SoupValue>
       <SoupTitle>{props.name}</SoupTitle>
       <SoupIngredients>
-        {props.ingredients[0].name} <Ing src={props.ingredients[0].svg} />+{" "}
-        {props.ingredients[1].name} <Ing src={props.ingredients[1].svg} />
+        <Ingredient>
+          {props.ingredients[0].name}
+          <IngredientImg src={props.ingredients[0].svg} />
+        </Ingredient>
+        <Plus />
+        <Ingredient>
+          {props.ingredients[1].name}
+          <IngredientImg src={props.ingredients[1].svg} />
+        </Ingredient>
       </SoupIngredients>
     </SoupListItemContainer>
   );

@@ -20,7 +20,7 @@ function App() {
 
   return (
     <AppContext.Provider value={{ toggledIngredients, setToggledIngredients }}>
-      <div>
+      <div className="row">
         <IngredientPicker />
         <SoupList />
       </div>

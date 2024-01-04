@@ -87,7 +87,7 @@ const IngredientPicker = () => {
   `;
 
   return (
-    <div>
+    <div className="col-ingredients">
       <Header>
         <Title>Ingredients</Title>
         <ClearButton onClick={() => clear()}>Clear</ClearButton>
